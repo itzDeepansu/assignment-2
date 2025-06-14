@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 ITZ Todo
 
-## Getting Started
+**Organize your tasks with style** — A sleek, modern to-do list built with **React + Next.js**, featuring filtering, sorting, priority management, and localStorage persistence.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✅ Add, complete, and delete tasks
+- 🔄 Filters: All, Active, Completed
+- 📊 Sorting: Newest, Oldest, Alphabetical, Priority
+- ⭐ Priority selection: High, Medium, Low
+- 💾 Auto-save to browser localStorage
+- ✨ Fully responsive with elegant UI (Glassmorphic)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📸 Screenshot
 
-## Learn More
+> UI preview — your tasks are automatically saved to the browser.
 
-To learn more about Next.js, take a look at the following resources:
+![App Screenshot](public/todo.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧪 Testing Guidance
 
-## Deploy on Vercel
+### 📦 Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/itzDeepansu/assignment-2
+   cd itz-todo
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the app:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open http://localhost:3000 in your browser.**
+
+### ✅ Manual Test Checklist
+
+#### 🔹 Task Input & Validation
+- [ ] Add a task (e.g. "Buy milk") — it should appear in the list
+- [ ] Try adding empty input — should prevent submission
+- [ ] Choose priority (defaults to Medium)
+
+#### 🔹 Task Actions
+- [ ] Mark a task complete by checking the checkbox
+- [ ] Unmark it by unchecking
+- [ ] Click clear selected to clear all completed tasks
+
+#### 🔹 Filters
+- [ ] **All** – shows all tasks
+- [ ] **Active** – shows only incomplete tasks
+- [ ] **Completed** – shows only completed tasks
+
+#### 🔹 Sorting
+- [ ] **Newest First** – most recently added tasks at the top
+- [ ] **Oldest First** – oldest tasks at the top
+- [ ] **Alphabetical** – sorted A-Z by task name
+- [ ] **Priority Based** – sorted by: High → Medium → Low
+
+#### 🔹 LocalStorage
+- [ ] Refresh the page — tasks should persist
+- [ ] Modify tasks status and check that state is saved between sessions
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **UI:** TailwindCSS + custom design (Glassmorphism)
+- **State:** React Hooks
+- **Storage:** localStorage (for persistence)
+
+---
+
+## 🎯 Getting Started
+
+After following the setup instructions above, you can start using ITZ Todo immediately. The application will automatically save your tasks to your browser's local storage, so your data persists between sessions.
+
+## 📝 Usage Tips
+
+- Tasks are automatically saved as you create, modify status , or delete them
+- Use the priority system to organize your most important tasks
+- Combine filters and sorting options to view your tasks exactly how you want
+- The responsive design works great on both desktop and mobile devices
