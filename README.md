@@ -30,7 +30,7 @@
 1. **Clone the repo:**
    ```bash
    git clone https://github.com/itzDeepansu/assignment-2
-   cd itz-todo
+   cd assignment-2
    ```
 
 2. **Install dependencies:**
@@ -56,6 +56,7 @@
 - [ ] Mark a task complete by checking the checkbox
 - [ ] Unmark it by unchecking
 - [ ] Click clear selected to clear all completed tasks
+- [ ] Click trash icon to delete selected task
 
 #### 🔹 Filters
 - [ ] **All** – shows all tasks
@@ -78,8 +79,8 @@
 
 - **Framework:** Next.js
 - **Language:** TypeScript
-- **UI:** TailwindCSS + custom design (Glassmorphism)
-- **State:** React Hooks
+- **UI:** TailwindCSS + ShadCN + custom design (Glassmorphism)
+- **State:** React State
 - **Storage:** localStorage (for persistence)
 
 ---

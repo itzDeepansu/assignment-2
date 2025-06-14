@@ -436,12 +436,11 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-
                   <Button
                     onClick={() => removeTask(task.id)}
                     variant="ghost"
                     size="sm"
-                    className="text-red-300 hover:text-red-200 hover:bg-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="text-red-400 hover:text-red-700 hover:bg-white "
                   >
                     <Trash2 className="w-4 h-4" />
                   </Button>
