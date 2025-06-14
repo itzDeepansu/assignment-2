@@ -35,7 +35,7 @@ interface Task {
 type SortOption = "newest" | "oldest" | "priority" | "alphabetical";
 type FilterOption = "all" | "active" | "completed";
 
-export default function Home() {
+export default function GlassmorphicTodoApp() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState("");
   const [priority, setPriority] = useState<"low" | "medium" | "high">("medium");
@@ -65,7 +65,6 @@ export default function Home() {
   }, [tasks]);
 
   // Validate task input
-  // 3 <= task length <= 100
   const validateTask = (text: string): string => {
     if (!text.trim()) {
       return "Task cannot be empty";
@@ -86,7 +85,7 @@ export default function Home() {
     return "";
   };
 
-  // Add new task after validation
+  // Add new task
   const addTask = () => {
     const validationError = validateTask(newTask);
     if (validationError) {
@@ -162,7 +161,7 @@ export default function Home() {
         );
     }
   }, [tasks, filterBy, sortBy]);
-//to find priority color for selected priority
+
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case "high":
@@ -175,7 +174,7 @@ export default function Home() {
         return "bg-gray-500/20 text-gray-300 border-gray-500/30";
     }
   };
-//to find priority icon for selected priority
+
   const getPriorityIcon = (priority: string) => {
     switch (priority) {
       case "high":
@@ -198,7 +197,7 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">
-            ITZ Todo
+            Glassmorphic Todo
           </h1>
           <p className="text-white/70">Organize your tasks with style</p>
         </div>
@@ -207,7 +206,6 @@ export default function Home() {
         <div className="backdrop-blur-md bg-white/10 rounded-2xl border border-white/20 p-6 mb-6 shadow-xl">
           <div className="space-y-4">
             <div className="flex gap-3">
-              {/* New Task Input */}
               <div className="flex-1">
                 <Input
                   type="text"
@@ -231,7 +229,7 @@ export default function Home() {
                   </p>
                 )}
               </div>
-                {/* Priority Dropdown */}
+
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button
@@ -315,7 +313,7 @@ export default function Home() {
                       : "Completed"}
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-black/80 text-white backdrop-blur-md border-white/20">
+                <DropdownMenuContent className="bg-black/80 backdrop-blur-md border-white/20">
                   <DropdownMenuRadioGroup
                     value={filterBy}
                     onValueChange={(value) =>
@@ -347,7 +345,7 @@ export default function Home() {
                     Sort
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-black/80 text-white backdrop-blur-md border-white/20">
+                <DropdownMenuContent className="bg-black/80 backdrop-blur-md border-white/20">
                   <DropdownMenuRadioGroup
                     value={sortBy}
                     onValueChange={(value) => setSortBy(value as SortOption)}
